@@ -1,0 +1,9 @@
+{% autoescape off %}
+<!--Verfication Email-->
+Hi {{user.username}},
+
+<!--Click this Link-->
+Please use the link below to verify your account. http://{{domain}}{% url 'accounts:activate' uidb64=uid token=token %}
+
+<!--Thank You-->
+{% endautoescape %}

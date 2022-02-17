@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% load crispy_forms_tags %}
+<!--Content Here-->
+{% block body_block %}
+<div class="container">
+   <div class="row">
+      <div class="col-md-4 offset-md-4">
+         <div class="card">
+            <div class="card-header bg-info text-white">
+               <h5 class="card-title">Sign In</h5>
+               <h6 class="card-subtitle mb-2">Enter your email and password to login!</h6>
+            </div>
+            <div class="card-body">
+               <form method="POST">
+                  {{form|crispy}} {% csrf_token %}
+                  <button type="submit" class="btn btn-primary btn-md">Login</button>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+{% endblock %}
