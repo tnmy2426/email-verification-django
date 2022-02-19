@@ -51,8 +51,8 @@ def send_activation_email(user, request):
                          to=[user.username]
                          )
 
-    if not settings.TESTING:
-        EmailThread(email).start()
+    # if not settings.TESTING:
+    EmailThread(email).start()
 
 
 # Registration / Acccount creation
